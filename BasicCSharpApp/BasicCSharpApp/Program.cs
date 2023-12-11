@@ -39,7 +39,7 @@ namespace HelloWorld
             //    counter++;
             //        }
 
-            while (userCode != exitCode) {
+            while (userCode != exitCode) { // This while loop keeps running until the inputted usercode is the same as the exitcode, which is 0
                 Console.WriteLine("What is your favorite number?");
                 number = Console.ReadLine();
                 if (Int32.TryParse(number, out int integerNumber)) // This outputs an integer value if the input is an integer, since the default Console.ReadLine() output is a string
@@ -59,14 +59,14 @@ namespace HelloWorld
                     Console.WriteLine("That doesn't seem like a number to me... Try again.");
                 }
 
-                Console.WriteLine("Would you like to continue? Input 0 to exit or any other number to continue.");
+                Console.WriteLine("Would you like to continue? Input 0 to exit or any other number to continue."); // This is where the user can exit the loop if they input 0
                 string playAgain = Console.ReadLine();
 
                 if(Int32.TryParse(playAgain, out userCode)) // This checks if the user inputted an integer value and if that value is 0. If the value is 0 then the loop is broken and application stops. 
                 {
                     if (userCode == 0)
                     {
-                        Console.WriteLine("It was fun playing. See you later!");
+                        Console.WriteLine("It was fun playing. See you later!"); // Console application exits since the usercode is the same as the exitcode
                     }
                     else 
                     {
